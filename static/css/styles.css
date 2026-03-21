@@ -295,3 +295,116 @@ body {
     height: 20px;
     opacity: 0.9;
 }
+
+/* ============================================
+   THEME TOGGLE BUTTON (SLIDING SWITCH)
+   ============================================ */
+
+.theme-toggle-btn {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 9999;
+
+    width: 42px;
+    height: 24px;
+
+    background: #d1d5db;
+    border-radius: 6px;
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    padding: 0;
+    font-size: 16px;
+
+    position: relative;
+    transition: background 0.2s ease;
+}
+
+/* White sliding square */
+.theme-toggle-btn::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+
+    background: #ffffff;
+    border-radius: 4px;
+
+    position: absolute;
+    left: 2px;               /* Default (Light mode) */
+    top: 2px;
+
+    transition: left 0.25s ease;
+    z-index: 1;
+}
+
+/* When dark mode is ON → move slider to the right */
+body.dark-mode .theme-toggle-btn::before {
+    left: 20px;              /* Moves square to the right */
+}
+
+/* =====================================================
+   DARK MODE — BACKGROUND DARK, TEXT WHITE
+   ===================================================== */
+body.dark-mode {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+/* Make ALL text white globally */
+body.dark-mode * {
+    color: #ffffff !important;
+}
+
+/* =====================================================
+   WHITE BOXES (PROJECTS, CERTS, EMAIL CARD, SOCIAL CARD)
+   Text inside them must be BLACK
+   ===================================================== */
+body.dark-mode .proj-card,
+body.dark-mode .cert-card,
+body.dark-mode .email-card,
+body-dark-mode .social-card,
+body.dark-mode .modal-content,
+body.dark-mode .tag {
+    background-color: #ffffff !important;  /* White box */
+    color: #000000 !important;             /* Black text */
+    border-color: #ffffff !important;
+}
+
+/* Override inside elements so they stay BLACK */
+body.dark-mode .proj-card *,
+body.dark-mode .cert-card *,
+body.dark-mode .email-card *,
+body.dark-mode .social-card *,
+body.dark-mode .modal-content *,
+body.dark-mode .tag * {
+    color: #000000 !important;
+}
+
+/* =====================================================
+   ICONS — inside white boxes = black, outside = white
+   ===================================================== */
+
+/* Icons INSIDE white boxes (social icons) */
+body.dark-mode .social-card img,
+body.dark-mode .email-icon {
+    filter: brightness(0); /* pure BLACK */
+}
+
+/* Icons OUTSIDE boxes (e.g., header icons) become white */
+body.dark-mode svg {
+    filter: brightness(0) invert(1);
+}
+
+/* =====================================================
+   FIX SKILL TAGS EXACTLY LIKE YOUR IMAGE
+   ===================================================== */
+body.dark-mode .tag {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border-radius: 8px;
+}
