@@ -408,3 +408,11 @@ body.dark-mode .tag {
     color: #000000 !important;
     border-radius: 8px;
 }
+
+/* Add spacing between Tools and Recent Certifications on mobile */
+@media (max-width: 768px) {
+    #skills .col-md-5 {
+        margin-top: 20px !important;
+    }
+}
+
