@@ -280,55 +280,56 @@
 
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h3 class="fw-bold mb-0">Recent Projects</h3>
-     <a href="#" class="view-all" id="viewAllBtn">View All →</a>
+     <a href="#" class="view-all" id="viewAllProjectsBtn" data-bs-toggle="modal" data-bs-target="#projectsModal">View All →</a>
     </div>
 
     <div class="row g-3">
 
-        <!-- PROJECT 1 - NEW PREVENTIVE MAINTENANCE SYSTEM -->
-        <div class="col-md-6">
-            <div class="proj-card bg-white p-3 rounded shadow-sm">
-                <h5 class="fw-bold mb-1">Preventive Maintenance System</h5>
-                <p class="text-muted mb-2">
-                    Maintenance tracking system for all laptops at Cohu Delta Design Philippines (Calamba Site)
-                </p>
-                <span class="proj-tag">Cohu Delta Design IT Project</span>
+            <!-- PROJECT 1 - NEW PREVENTIVE MAINTENANCE SYSTEM -->
+            <div class="col-md-6">
+                <div class="proj-card bg-white p-3 rounded shadow-sm">
+                    <h5 class="fw-bold mb-1">Preventive Maintenance System</h5>
+                    <p class="text-muted mb-2">
+                        Maintenance tracking system for all laptops at Cohu Delta Design Philippines (Calamba Site)
+                    </p>
+                    <span class="proj-tag">Cohu Delta Design IT Project</span>
+                </div>
             </div>
-        </div>
 
-        <!-- PROJECT 2 -->
-        <div class="col-md-6">
-            <div class="proj-card bg-white p-3 rounded shadow-sm">
-                <h5 class="fw-bold mb-1">IT Inventory System</h5>
-                <p class="text-muted mb-2">
-                  Desktop-based inventory system for tracking purchased items from POs, assigning them to users, 
-                  and generating complete inventory reports.
-                </p>
-                <span class="proj-tag">Cohu Delta Design IT Project</span>
+            <!-- PROJECT 2 -->
+            <div class="col-md-6">
+                <div class="proj-card bg-white p-3 rounded shadow-sm">
+                    <h5 class="fw-bold mb-1">IT Inventory System</h5>
+                    <p class="text-muted mb-2">
+                    Desktop-based inventory system for tracking purchased items from POs, assigning them to users, 
+                    and generating complete inventory reports.
+                    </p>
+                    <span class="proj-tag">Cohu Delta Design IT Project</span>
+                </div>
             </div>
-        </div>
 
-        <!-- PROJECT 3 -->
-        <div class="col-md-6">
-            <div class="proj-card bg-white p-3 rounded shadow-sm">
-                <h5 class="fw-bold mb-1">ERP & Cash Invoice System</h5>
-                <p class="text-muted mb-2">Web-based forecasting & purchasing system</p>
-                <span class="proj-tag">Internal-ERP</span>
+            <!-- PROJECT 3 -->
+            <div class="col-md-6">
+                <div class="proj-card bg-white p-3 rounded shadow-sm">
+                    <h5 class="fw-bold mb-1">ERP & Cash Invoice System</h5>
+                    <p class="text-muted mb-2">Web-based ERP system for BOM forecasting, purchasing, sales, and automated cash invoice management.</p>
+                    <span class="proj-tag">Taisei Electronics INC. </span>
+                </div>
             </div>
-        </div>
 
-        <!-- PROJECT 4 -->
-        <div class="col-md-6">
-            <div class="proj-card bg-white p-3 rounded shadow-sm">
-                <h5 class="fw-bold mb-1">Portable Tracking & Safety Device</h5>
-                <p class="text-muted mb-2">
-                    College thesis project (GPS + GSM emergency alert system)
-                </p>
-                <span class="proj-tag">Capstone</span>
+            <!-- PROJECT 4 -->
+            <div class="col-md-6">
+                <div class="proj-card bg-white p-3 rounded shadow-sm">
+                    <h5 class="fw-bold mb-1">Portable Tracking & Safety Device</h5>
+                    <p class="text-muted mb-2">
+                     Portable safety device with real-time GPS tracking, live camera feed, 
+                        and emergency alert system built with ESP32 and Firebase.
+                    </p>
+                    <span class="proj-tag">Capstone</span>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="section mb-4 contact-section">
@@ -449,6 +450,68 @@
   </div>
 </div>
 
+<!-- ================= PROJECTS MODAL ================= -->
+<div class="modal fade" id="projectsModal" tabindex="-1" aria-labelledby="projectsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold" id="projectsModalLabel">All Projects</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="row g-3">
+
+          <!-- PROJECT 1 -->
+          <div class="col-md-6">
+            <div class="proj-card bg-light p-3 rounded shadow-sm h-100">
+              <h5 class="fw-bold mb-1">Preventive Maintenance System</h5>
+              <p class="text-muted mb-2">
+                Maintenance tracking system for all laptops at Cohu Delta Design Philippines (Calamba Site)
+              </p>
+              <span class="proj-tag">Cohu Delta Design IT Project</span>
+            </div>
+          </div>
+
+          <!-- PROJECT 2 -->
+          <div class="col-md-6">
+            <div class="proj-card bg-light p-3 rounded shadow-sm h-100">
+              <h5 class="fw-bold mb-1">IT Inventory System</h5>
+              <p class="text-muted mb-2">
+                Desktop-based inventory system for tracking purchased items from POs, assigning them to users,
+                and generating complete inventory reports.
+              </p>
+              <span class="proj-tag">Cohu Delta Design IT Project</span>
+            </div>
+          </div>
+
+          <!-- PROJECT 3 -->
+          <div class="col-md-6">
+            <div class="proj-card bg-light p-3 rounded shadow-sm h-100">
+              <h5 class="fw-bold mb-1">ERP & Cash Invoice System</h5>
+              <p class="text-muted mb-2">Web-based forecasting & purchasing system</p>
+              <span class="proj-tag">Internal-ERP</span>
+            </div>
+          </div>
+
+          <!-- PROJECT 4 -->
+          <div class="col-md-6">
+            <div class="proj-card bg-light p-3 rounded shadow-sm h-100">
+              <h5 class="fw-bold mb-1">Portable Tracking & Safety Device</h5>
+              <p class="text-muted mb-2">
+                College thesis project (GPS + GSM emergency alert system)
+              </p>
+              <span class="proj-tag">Capstone</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
     <script>
 window.addEventListener("DOMContentLoaded", function () {
